@@ -12,3 +12,20 @@ hero:
       link: developers/overview/
       variant: minimal
 ---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+	<Card title="Start here" icon="rocket">
+		New to Graft? Learn the [core concepts](getting-started/concepts/) and set up [your first workspace](getting-started/first-workspace/).
+	</Card>
+	<Card title="Configure your business" icon="setting">
+		[Entities](guide/entities/), [forms](guide/forms/), [bookings](guide/bookings/), [payments](guide/payments/) and your [team](guide/team/).
+	</Card>
+	<Card title="Build on the API" icon="seti:json">
+		A [quickstart](developers/quickstart/), [authentication](developers/authentication/) and the full [endpoint reference](developers/api/).
+	</Card>
+	<Card title="Pick a template" icon="puzzle">
+		Fifteen [workspace templates](guide/templates/) set up a salon, hotel, shop, garage and more in one step.
+	</Card>
+</CardGrid>
