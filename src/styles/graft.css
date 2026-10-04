@@ -1,0 +1,95 @@
+/* Graft brand: logo/graft-brand-kit/BRAND.md in the graft repo.
+   Green #16A34A, deep #15803D, light #4ADE80, ink #0F172A. Poppins for headings. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+:root {
+	--graft-green: #16a34a;
+	--graft-green-deep: #15803d;
+	--graft-green-light: #4ade80;
+	--graft-ink: #0f172a;
+
+	--sl-font-system: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+	--graft-heading-font: 'Poppins', var(--sl-font-system);
+}
+
+/* Dark is Starlight's default theme. Light-green glyph colours on dark. */
+:root {
+	--sl-color-accent-low: #0b3b1e;
+	--sl-color-accent: #16a34a;
+	--sl-color-accent-high: #4ade80;
+	--sl-color-bg: #0b0d10;
+	--sl-color-bg-nav: #0b0d10;
+	--sl-color-bg-sidebar: #0b0d10;
+	--sl-color-hairline-light: #232a32;
+	--sl-color-hairline: #232a32;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #dcfce7;
+	--sl-color-accent: #16a34a;
+	--sl-color-accent-high: #15803d;
+	--sl-color-bg: #ffffff;
+	--sl-color-bg-nav: #ffffff;
+	--sl-color-bg-sidebar: #f8fafc;
+	--sl-color-black: #ffffff;
+	--sl-color-white: #0f172a;
+	--sl-color-hairline-light: #e2e8f0;
+	--sl-color-hairline: #e2e8f0;
+}
+
+h1,
+h2,
+h3,
+.hero h1,
+.site-title {
+	font-family: var(--graft-heading-font);
+	letter-spacing: -0.01em;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+/* A green rule under the page title echoes the graft-node mark. */
+.sl-markdown-content h2 {
+	border-bottom: 1px solid var(--sl-color-hairline);
+	padding-bottom: 0.3rem;
+}
+
+/* The primary button reads as Graft green, with enough contrast for white text. */
+.sl-link-button.primary {
+	background-color: var(--graft-green-deep);
+	border-color: var(--graft-green-deep);
+	color: #fff;
+}
+.sl-link-button.primary:hover {
+	background-color: var(--graft-green);
+	border-color: var(--graft-green);
+}
+
+/* Landing page */
+.hero {
+	padding-block: clamp(2.5rem, 8vw, 5rem);
+}
+.hero .tagline {
+	max-width: 36rem;
+}
+
+/* Method badges in the endpoint reference: a heading that starts with a verb code. */
+.sl-markdown-content h2 code:first-child {
+	font-weight: 700;
+	background: var(--sl-color-accent-low);
+	color: var(--sl-color-accent-high);
+	border-radius: 0.3rem;
+}
+
+.sl-markdown-content h2 code {
+	font-size: 0.7em;
+}
+
+/* Landing cards: one brand colour instead of Starlight's rotating ones. */
+.card .icon {
+	border-color: var(--sl-color-accent);
+	background-color: var(--sl-color-accent-low);
+	color: var(--sl-color-accent-high);
+}

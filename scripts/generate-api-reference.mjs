@@ -57,7 +57,7 @@ order.forEach((group, i) => {
 
 const count = endpoints.length;
 writeFileSync(`${OUT}/index.md`,
-  `---\ntitle: "Endpoint reference"\ndescription: "Every public Graft endpoint, grouped by area."\nsidebar:\n  order: 0\n---\n\n` +
+  `---\ntitle: "Overview"\ndescription: "Every public Graft endpoint, grouped by area."\nsidebar:\n  order: 0\n---\n\n` +
   `${count} endpoints, generated from Graft's API catalogue. Read [Conventions](../conventions/) first for the response envelope, errors, pagination and rate limits.\n\n` +
   order.filter((g) => byGroup[g]).map((g) => `- [${GROUPS[g].title}](./${g}/) (${byGroup[g].length}): ${GROUPS[g].blurb}`).join("\n") + "\n");
 
