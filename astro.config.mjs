@@ -8,6 +8,17 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Graft Docs',
+			logo: {
+				light: './src/assets/logo-light.svg',
+				dark: './src/assets/logo-dark.svg',
+				replacesTitle: true,
+			},
+			favicon: '/favicon.svg',
+			head: [
+				{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/graft-doc/apple-touch-icon.png' } },
+				{ tag: 'meta', attrs: { name: 'theme-color', content: '#16a34a' } },
+			],
+			customCss: ['./src/styles/graft.css'],
 			description: 'How Graft works, how to configure it, and how to build on its API.',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/ben42-01/graft-doc' }],
 			sidebar: [
