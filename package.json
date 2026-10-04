@@ -7,7 +7,11 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "api:generate": "node scripts/generate-api-reference.mjs",
+    "api:sync": "bash scripts/sync-api-catalogue.sh",
+    "predev": "npm run api:generate",
+    "prebuild": "npm run api:generate"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.42.5",
