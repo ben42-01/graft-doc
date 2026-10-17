@@ -9,9 +9,10 @@
     "preview": "astro preview",
     "astro": "astro",
     "api:generate": "node scripts/generate-api-reference.mjs",
+    "cli:generate": "node scripts/generate-cli-reference.mjs",
     "api:sync": "bash scripts/sync-api-catalogue.sh",
-    "predev": "npm run api:generate",
-    "prebuild": "npm run api:generate"
+    "predev": "npm run api:generate && npm run cli:generate",
+    "prebuild": "npm run api:generate && npm run cli:generate"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.42.5",

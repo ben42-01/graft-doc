@@ -47,6 +47,22 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Command line',
+					items: [
+						{ label: 'The Graft CLI', slug: 'cli' },
+						{ label: 'Signing in', slug: 'cli/signing-in' },
+						{ label: 'Using the CLI', slug: 'cli/using' },
+						{ label: 'Walkthrough: run a workspace', slug: 'cli/walkthrough' },
+						{ label: 'Scripting and automation', slug: 'cli/scripting' },
+						{ label: 'Troubleshooting', slug: 'cli/troubleshooting' },
+						{
+							label: 'Command reference',
+							collapsed: true,
+							items: [{ autogenerate: { directory: 'cli/reference' } }],
+						},
+					],
+				},
+				{
 					label: 'Developers',
 					items: [
 						{ label: 'API overview', slug: 'developers/overview' },
